@@ -287,8 +287,11 @@ function update()
 		
     -- unsafeguards
     --
-    if ri.generationRate > fluxgate.getSignalLowFlow()  and ri.temperature < 7700 then
-      fluxgate.setSignalLowFlow(fluxgate.getSignalLowFlow()+1000)
+    fluxLow = fluxgate.getSignalLowFlow()
+    if ri.generationRate > fluxLow then
+	if ri.temperature < 7700 then
+      	  fluxgate.setSignalLowFlow(fluxLow+1000)
+	end
     end
 
     -- safeguards
