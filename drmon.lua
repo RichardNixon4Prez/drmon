@@ -277,7 +277,7 @@ function update()
     -- or set it to our saved setting since we are on manual
     if ri.status == "online" then
       if autoInputGate == 1 then 
-        fluxval = ri.fieldDrainRate / (1 - (targetStrength/100) )
+        fluxval = ri.fieldDrainRate / (.7 - (targetStrength/100) )
         print("Target Gate: ".. fluxval)
         inputfluxgate.setSignalLowFlow(fluxval)
       else
