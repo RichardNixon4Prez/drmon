@@ -5,7 +5,7 @@ local fluxgateSide = "right"
 local targetStrength = 50
 local maxTemperature = 8000
 local safeTemperature = 3000
-local lowestFieldPercent = 15
+local lowestFieldPercent = 45
 
 local activateOnCharged = 1
 
