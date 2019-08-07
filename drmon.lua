@@ -284,6 +284,12 @@ function update()
         inputfluxgate.setSignalLowFlow(curInputGate)
       end
     end
+		
+    -- unsafeguards
+    --
+    if (ri.generationRate > fluxgate.getSignalLowFlow() ) and ri.temperature <= 7700) then
+      fluxgate.setSignalLowFlow(fluxgate.getSignalLowFlow()+1000)
+    end
 
     -- safeguards
     --
