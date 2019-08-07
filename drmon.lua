@@ -29,7 +29,7 @@ local inputfluxgate
 local ri
 
 -- last performed action
-local action = "None since reboot"
+local action = "None since nixon"
 local emergencyCharge = false
 local emergencyTemp = false
 
